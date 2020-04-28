@@ -962,7 +962,7 @@ async function run() {
     if (no_parallel) {
       addArg += ' -parallel 1';
     }
-    let tCommand = `go test -v${addArg} -coverprofile=${scopeLogsPath}/coverage.out ./...`;
+    let tCommand = `go test ${addArg} -coverprofile=${scopeLogsPath}/coverage.out ./...`;
     let bCommand = `go test -run Benchmark -bench=.`;
     if (test_command) {
       tCommand = test_command;
